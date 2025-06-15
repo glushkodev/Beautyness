@@ -1,0 +1,30 @@
+.icons {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.facebook {
+	width: 10px;
+	height: 19px;
+	transition: all 0.4s ease;
+}
+
+.facebook:hover path,
+.x:hover path,
+.linkedin:hover path {
+	fill: #7a9ca5;
+	transition: all 0.4s ease;
+}
+
+.x {
+	width: 16px;
+	height: 19px;
+	transition: all 0.4s ease;
+}
+
+.linkedin {
+	width: 14px;
+	height: 19px;
+	transition: all 0.4s ease;
+}

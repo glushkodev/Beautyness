@@ -1,5 +1,4 @@
 import { Link } from "react-router"
-import { ListItem } from "../../header"
 
 
 const Footer = () => {

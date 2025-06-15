@@ -1,0 +1,24 @@
+.call {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.text,
+.link {
+  font-family: var(--font-family);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #141414;
+}
+
+.link {
+  transition: all 0.4s ease;
+}
+
+.link:hover {
+  color: #7a9ca5;
+}

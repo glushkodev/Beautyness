@@ -1,32 +1,22 @@
-// import { Link } from "react-router"
-import ListItem from "./components/ListItem"
-// import { useCart } from "../../../shared/context/CartContext"
-
-import { Link } from "react-router-dom"
-
+import styles from './index.module.css'
+import Nav from './components/Nav/Nav'
+import SocialIcons from './components/SocialIcons/SocialIcons'
+import ReserveButton from './components/ReserveBtn/ReserveButton'
+import Call from './components/Call/Call'
+import Logo from './components/Logo/Logo'
 
 const Header = () => {
-	// const { cart } = useCart()
-
 	return (
-		<header>
-			<div className="logo">
-				<img src="#" alt="logo" />
+		<header className={styles.header}>
+			<div className={styles.start}>
+				<Logo />
+				<Call />
 			</div>
-			<nav>
-				<ul>
-					<ListItem><Link to={'/'}>Главная</Link></ListItem>
-					<ListItem>Страницы
-						<ul>
-							<ListItem><Link to={'/blog'}>О нас</Link></ListItem>
-							<ListItem><Link to={'/team'}>Наша команда</Link></ListItem>
-							<ListItem><Link to={'/locations'}>Где мы находимся</Link></ListItem>
-						</ul>
-					</ListItem>
-					<ListItem><Link to={'/services'}>Услуги</Link></ListItem>
-					<ListItem><Link to={'/contact'}>Контакты</Link></ListItem>			
-				</ul>
-			</nav>
+			<div className={styles.end}>
+				<Nav />
+				<SocialIcons />
+				<ReserveButton />
+			</div>
 		</header>
 	)
 }

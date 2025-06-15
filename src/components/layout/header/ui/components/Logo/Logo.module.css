@@ -1,0 +1,13 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.text {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 125%;
+  color: #141414;
+}
