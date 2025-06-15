@@ -1,16 +1,16 @@
-// import CartProvider from "../shared/context/CartContext"
+import styles from './index.module.css'
 import Footer from "./footer"
 import Header from "./header"
 import Main from "./main/ui"
 
-const Layout = () => {
+const Layout = ({ children }) => {
 	return (
 		<>
-			{/* <CartProvider> */}
-				<Header />
-				<Main />
-				<Footer />
-			{/* </CartProvider> */}
+			<Header />
+			<div className={styles.container}>
+				<Main>{children}</Main>
+			</div>
+			<Footer />
 		</>
 	)
 }

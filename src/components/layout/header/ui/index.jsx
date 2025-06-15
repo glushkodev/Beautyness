@@ -3,13 +3,13 @@ import Nav from './components/Nav/Nav'
 import SocialIcons from './components/SocialIcons/SocialIcons'
 import ReserveButton from './components/ReserveBtn/ReserveButton'
 import Call from './components/Call/Call'
-import Logo from './components/Logo/Logo'
+import Logo from '../../../shared/Logo/Logo'
 
 const Header = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.start}>
-				<Logo />
+				<Logo variant="header" />
 				<Call />
 			</div>
 			<div className={styles.end}>

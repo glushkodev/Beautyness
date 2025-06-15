@@ -1,0 +1,47 @@
+.icons {
+	display: flex;
+	gap: 10px;
+}
+
+.link { 
+	border: 2px solid #5c8692;
+	background: transparent;
+	width: 55px;
+	height: 55px;
+	transition: all 0.4s ease;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.link:hover {
+	background-color: #566f75;
+	transition: all 0.4s ease;
+}
+
+.facebook {
+	width: 12px;
+	height: 22px;
+}
+
+.facebook path,
+.x path, 
+.linkedin path {
+	fill: #fff;
+}
+
+.x {
+	width: 18px;
+	height: 22px;
+}
+
+.linkedin {
+	width: 16px;
+	height: 22px;
+}
+
+.instagram {
+	width: 17px;
+	height: 23px;
+}
