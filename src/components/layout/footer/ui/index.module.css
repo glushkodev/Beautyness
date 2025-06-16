@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.content {
+.container {
 	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -14,5 +14,13 @@
 .top {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 52px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btm {
+	margin-top: 52px;
+	display: flex;
 	justify-content: space-between;
 }
