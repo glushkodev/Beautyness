@@ -7,11 +7,12 @@
 }
 
 .title {
-	font-family: var(--second-family);
 	font-weight: 700;
-	font-size: 22px;
+	font-size: 19px;
 	line-height: 140%;
 	color: #fff;
+	font-family: var(--font-family);
+	text-transform: uppercase;
 }
 
 .days {

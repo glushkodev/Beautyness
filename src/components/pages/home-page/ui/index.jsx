@@ -1,8 +1,10 @@
+import styles from './index.module.css'
+import Welcome from "./components/welcome/Welcome"
 
 const HomePage = () => {
 	return (
-		<div>
-			<h1>Домашняя страница</h1>
+		<div className={styles.welcome}>
+			<Welcome />
 		</div>
 	)
 }
