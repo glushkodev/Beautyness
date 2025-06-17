@@ -1,0 +1,112 @@
+.benefits {
+	padding: 144px 0 160px 0;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.subhead {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 154%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #5c8692;
+	margin-bottom: 10px;
+}
+
+.title {
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 130%;
+	letter-spacing: -0.01em;
+	text-align: center;
+	color: #141414;
+	margin-bottom: 45px;
+}
+
+.items {
+	display: flex;
+	gap: 31px 90px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	width: 28%;
+}
+
+.arrow {
+	background-color: #5c8692;
+	width: 80px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+	position: relative;
+	transition: all 0.4s ease;
+}
+
+.arrow:hover {
+	background-color: #7a9ca5;
+}
+    
+.border {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+	width: 90px;
+	height: 90px;
+  pointer-events: none;
+}
+
+.border rect {
+  animation: dashMove 4s linear infinite;
+  animation-play-state: paused;
+  stroke-linecap: round;
+}
+
+.arrow:hover .border rect {
+  animation-play-state: running;
+}
+
+@keyframes dashMove {
+  0%   { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 36; }
+}
+
+.subtitle {
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 120%;
+	color: #141414;
+	margin-bottom: 10px;
+}
+
+.subtext {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 165%;
+	letter-spacing: 0.02em;
+	color: #555;
+}
