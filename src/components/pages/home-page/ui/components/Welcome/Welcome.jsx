@@ -12,8 +12,8 @@ const Welcome = () => {
             <div className={styles.subtitle}>
               <h2 className={styles.subtext}>Добро пожаловать в Beautyness!!!</h2>
             </div>
-            <h1 className={styles.title}>Beauty is power a smile is its sword.</h1>
-            <span className={styles.text}>There are many variation of passages are Ipsum available, majority have suffered alteration in some form.</span>
+            <h1 className={styles.title}>Красота — это сила, улыбка — ее меч.</h1>
+            <span className={styles.text}>В Ipsum доступно множество вариаций отрывков, большинство из которых в той или иной форме подверглись изменениям.</span>
             <Link to="/services" className={styles.btn}>Make a reservation</Link>
           </div>
           <div className={styles.right}>
