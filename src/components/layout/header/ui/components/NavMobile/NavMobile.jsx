@@ -4,9 +4,11 @@ import Logo from '../../../../../shared/Logo/Logo'
 import { useEffect, useState } from 'react';
 
 const NavMobile = ({ isOpen, onClose }) => {
-	 const [isSubmenuOpen, setIsSubmenuOpen] = useState (false);
+	const [isSubmenuOpen, setIsSubmenuOpen] = useState (false);
+	const [isVisible, setIsVisible] = useState(false);
+	const [isClosing, setIsClosing] = useState(false);
 
-	 useEffect(() => {
+	useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     return () => {
       document.body.style.overflow = 'auto';
