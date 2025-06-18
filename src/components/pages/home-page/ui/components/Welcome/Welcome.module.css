@@ -135,9 +135,177 @@
 
 .img {
 	width: 595px;
-	height: 545px;
+	height: 530px;
 	position: absolute;
 	z-index: 5;
 	left: -70px;
 	top: 13%;
+}
+
+@media (max-width: 1360px) {
+	.splitBackground {
+		padding: 60px 0;
+		height: 100%;
+	}
+
+	.right {
+		position: static;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.border {
+		display: none;
+	}
+
+	.img {
+		position: static;
+		width: 510px;
+    height: 470px;
+	}
+
+	.title {
+		font-size: 48px;
+	}
+
+	.text,
+	.subtext {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 1260px) {
+	.img {
+		width: 480px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.container {
+		padding: 0;
+	}
+
+	.content {
+		justify-content: center;
+    flex-direction: column-reverse;
+	}
+
+	.splitBackground {
+		overflow: visible;
+		display: block;
+		padding: 90px 0;
+	}
+
+	.splitBackground::before {
+		width: 100%;
+    z-index: -1;
+	}
+
+	.splitBackground::after {
+		display: none;
+	}
+
+	.left {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.img {
+		position: static;
+		width: 580px;
+		height: 480px;
+		margin-bottom: 50px;
+	}
+
+	.title {
+		font-size: 40px;
+	}
+
+	.text,
+	.subtext,
+	.btn {
+		font-size: 14px;
+	}
+
+	.text {
+		text-align: center;
+	}
+
+	.subtext {
+		margin-bottom: 12px;
+	}
+}
+
+@media (max-width: 910px) {
+	.title {
+		font-size: 34px;
+	}
+
+	.text,
+	.subtext,
+	.btn {
+		font-size: 12px;
+	}
+
+	.subtext {
+		margin-bottom: 12px;
+	}
+}
+
+@media (max-width: 768px) {
+	.splitBackground {
+		padding: 60px 0;
+	}
+	
+	.title {
+		font-size: 30px;
+	}
+
+	.text,
+	.subtext,
+	.btn {
+		font-size: 10px;
+	}
+
+	.subtext {
+		margin-bottom: 12px;
+	}
+	
+	.btn {
+		padding: 20px 36px 20px 36px;
+	}
+}
+
+@media (max-width: 640px) {
+	.img {
+		width: 330px;
+    height: 280px;
+		margin-bottom: 40px;
+	}
+
+	.title {
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.subtext::before {
+		display: none;
+	}
+
+	.subtext {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 425px) {
+	.img {
+		width: 260px;
+    height: 230px;
+	}
+
+	.title {
+		font-size: 14px;
+	}
 }

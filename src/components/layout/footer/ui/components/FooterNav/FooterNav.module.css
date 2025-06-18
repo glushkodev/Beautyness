@@ -38,3 +38,42 @@
 .link:hover {
 	color: #7a9ca5;
 }
+
+@media (max-width: 1440px) {
+	.nav {
+		gap: 90px;
+	}
+}
+
+@media (max-width: 910px) {
+	.nav {
+		width: 100%;
+	}
+
+	.title {
+		font-size: 16px;
+	}
+	
+	.link {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 425px) {
+	.nav {
+		gap: 60px;
+	}
+
+	.elem {
+		gap: 15px;
+	}
+
+	.title {
+		font-size: 14px;
+	}
+	
+	.link {
+		font-size: 10px;
+	}
+
+}

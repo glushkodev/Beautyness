@@ -9,3 +9,48 @@
   font-weight: 700;
   line-height: 125%;
 }
+
+.header .text {
+  font-size: 28px;
+  color: #141414;
+}
+
+.footer .text {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.menu .text {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.headerIcon {
+  width: 33px;
+  height: 33px;
+  stroke: #7A9CA5;
+}
+
+.footerIcon {
+  width: 65px;
+  height: 65px;
+  stroke: #5C8692;
+}
+
+.menuIcon {
+  width: 33px;
+  height: 33px;
+  stroke: #ffffff;
+}
+
+@media (max-width: 425px) {
+  .header .text,
+  .footer .text {
+    font-size: 24px;
+  }
+
+  .footerIcon {
+    width: 33px;
+    height: 33px;
+  }
+}

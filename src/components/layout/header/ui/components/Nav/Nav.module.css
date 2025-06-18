@@ -98,7 +98,13 @@
 	transition: opacity 0.3s ease; 
 }
 
-@media (max-width: 910px) {
+@media (max-width: 1200px) {
+	.list {
+		gap: 24px;
+	}
+}
+
+@media (max-width: 1024px) {
   .nav{
     display: none;
   }

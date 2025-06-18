@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (max-width: 910px) {
+@media (max-width: 1024px) {
 	.navtoogle {
 		display: flex;
 		flex-direction: column;

@@ -28,7 +28,13 @@
 	color: #fff;
 }
 
-@media (max-width: 910px) {
+@media (max-width: 1200px) {
+	.btn {
+		padding: 16px 22px;
+	}
+}
+
+@media (max-width: 1024px) {
 	.btn {
 		display: none;
 	}

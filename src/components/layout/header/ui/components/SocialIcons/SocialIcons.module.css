@@ -29,7 +29,7 @@
 	transition: all 0.4s ease;
 }
 
-@media (max-width: 910px) {
+@media (max-width: 1630px) {
 	.icons {
 		display: none;
 	}

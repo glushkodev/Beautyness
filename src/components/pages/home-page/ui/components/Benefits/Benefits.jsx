@@ -11,32 +11,32 @@ const Benefits = () => {
           <h2 className={styles.title}>На самом деле, что вы получите</h2>
           <div className={styles.items}>
             <div className={styles.item}>
-              <div className={styles.arrow}><Arrow /><Border className={styles.border} /></div>
+              <div className={styles.arrow}><Arrow className={styles.arrowico} /><Border className={styles.border} /></div>
               <div className={styles.subtitle}>Оптимизированная энергоэффективность</div>
               <div className={styles.subtext}>Смысл использования Lorem Ipsum в том, чтобы сделать его читабельным.</div>
             </div>
             <div className={styles.item}>
-              <div className={styles.arrow}><Arrow /><Border className={styles.border} /></div>
+              <div className={styles.arrow}><Arrow className={styles.arrowico} /><Border className={styles.border} /></div>
               <div className={styles.subtitle}>Многогранная фильтрация воды</div>
               <div className={styles.subtext}>Смысл использования Lorem Ipsum в том, чтобы сделать его читабельным.</div>
             </div>
             <div className={styles.item}>
-              <div className={styles.arrow}><Arrow /><Border className={styles.border} /></div>
+              <div className={styles.arrow}><Arrow className={styles.arrowico} /><Border className={styles.border} /></div>
               <div className={styles.subtitle}>Бескомпромиссное качество</div>
               <div className={styles.subtext}>Смысл использования Lorem Ipsum в том, чтобы сделать его читабельным.</div>
             </div>
             <div className={styles.item}>
-              <div className={styles.arrow}><Arrow /><Border className={styles.border} /></div>
+              <div className={styles.arrow}><Arrow className={styles.arrowico} /><Border className={styles.border} /></div>
               <div className={styles.subtitle}>Расслабляющие спа-процедуры</div>
               <div className={styles.subtext}>Смысл использования Lorem Ipsum в том, чтобы сделать его читабельным.</div>
             </div>
             <div className={styles.item}>
-              <div className={styles.arrow}><Arrow /><Border className={styles.border} /></div>
+              <div className={styles.arrow}><Arrow className={styles.arrowico} /><Border className={styles.border} /></div>
               <div className={styles.subtitle}>Легкий уход для лучшего удовольствия</div>
               <div className={styles.subtext}>Смысл использования Lorem Ipsum в том, чтобы сделать его читабельным.</div>
             </div>
             <div className={styles.item}>
-              <div className={styles.arrow}><Arrow /><Border className={styles.border} /></div>
+              <div className={styles.arrow}><Arrow className={styles.arrowico} /><Border className={styles.border} /></div>
               <div className={styles.subtitle}>Оптимизированная энергоэффективность</div>
               <div className={styles.subtext}>Смысл использования Lorem Ipsum в том, чтобы сделать его читабельным.</div>
             </div>
