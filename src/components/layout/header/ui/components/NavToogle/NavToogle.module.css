@@ -1,0 +1,15 @@
+.navtoogle {
+  display: none;
+}
+
+@media (max-width: 910px) {
+	.navtoogle {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+		border-radius: 5px;
+		padding: 13px;
+		border: none;
+		background-color: #fff;
+  }
+}

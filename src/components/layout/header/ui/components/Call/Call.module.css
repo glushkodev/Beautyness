@@ -22,3 +22,9 @@
 .link:hover {
   color: #7a9ca5;
 }
+
+@media (max-width: 910px) {
+	.call {
+		display: none;
+	}
+}

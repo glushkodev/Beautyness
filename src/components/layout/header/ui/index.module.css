@@ -1,8 +1,14 @@
 .header {
-	padding: 38px 60px; 
+	padding: 20px 60px; 
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: fixed;
+	z-index: 995;
+	top: 0;
+  left: 0;
+  width: 100%;
+	background-color: white;
 }
 
 .start {
@@ -16,4 +22,3 @@
 	gap: 32px;
 	align-items: center;
 }
-
