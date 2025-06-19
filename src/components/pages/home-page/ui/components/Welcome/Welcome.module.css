@@ -194,7 +194,6 @@
 	.splitBackground {
 		overflow: visible;
 		display: block;
-		padding: 90px 0;
 	}
 
 	.splitBackground::before {
