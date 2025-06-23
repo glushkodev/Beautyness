@@ -142,6 +142,12 @@
 	flex-direction: column;
 }
 
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .input {
 	display: flex;
   align-items: flex-start;
@@ -182,6 +188,7 @@
 	color: #fff;
 	transition: all 0.4s ease;
 	border: none;
+	cursor: pointer;
 }
 
 .btn:hover {
@@ -191,6 +198,20 @@
 .submitted {
   background-color: #4CAF50 !important; 
   cursor: default;
+}
+
+.inputError {
+  border: 2px solid #e74c3c;
+  outline: none;
+	font-family: var(--font-family);
+	font-weight: 400;
+}
+
+.errorText {
+  color: #e74c3c;
+  font-size: 12px;
+	font-family: var(--font-family);
+	font-weight: 400;
 }
 
 @media (max-width: 1250px) {
@@ -300,6 +321,10 @@
 		height: 18px;
 		width: 18px;
 	}
+
+	.errorText {
+		font-size: 9px;
+	}
 }
 
 @media (max-width: 640px) {
@@ -325,5 +350,9 @@
 	.percent {
 		height: 26px;
 		width: 60px;
+	}
+
+	.errorText {
+		font-size: 7px;
 	}
 }
