@@ -1,0 +1,329 @@
+.discount {
+	padding: 130px 0;
+	background-color: #edf5f7;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	width: 45%;
+}
+
+.subhead {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 154%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #5c8692;
+	margin-bottom: 10px;
+}
+
+.title {
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 130%;
+	letter-spacing: -0.01em;
+	color: #141414;
+	margin-bottom: 15px;
+}
+
+.text {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 175%;
+	color: #555;
+	margin-bottom: 38px;
+}
+
+.banner {
+	display: flex;
+  align-items: stretch;
+	justify-content: center;
+}
+
+.contact {
+	background-color: #fff;
+	border: 1px solid #95bfcb;
+	padding: 18px 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.item {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+}
+
+.label,
+.link {
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 150%;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #141414;
+}
+
+.link {
+	font-weight: 500;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.link:hover {
+	color: #7a9ca5;
+}
+
+.right {
+	background-color: #1e2c30;
+	padding: 12px 34px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.get {
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: 15px;
+	line-height: 175%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	text-wrap: nowrap;
+}
+
+.discountText {
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 175%;
+	letter-spacing: 0.02em;
+	text-align: center;
+	color: #fff;
+}
+
+.form {
+	padding: 66px 75px;
+	box-shadow: 0 20px 40px 0 rgba(42, 68, 75, 0.13);
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+}
+
+.input {
+	display: flex;
+  align-items: flex-start;
+	justify-content: center;
+	gap: 15px;
+	border: 1px solid #5c8692;
+	margin-bottom: 15px;
+	padding: 18px 15px;
+	width: 400px;
+}
+
+.input input,
+.input textarea {
+	flex: 1;
+  border: none;
+  outline: none;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 160%;
+	color: #555;
+}
+
+.input textarea {
+	resize: none;
+}
+
+.btn {
+	padding: 23px 109px;
+	background-color: #5c8692;
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 125%;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	transition: all 0.4s ease;
+	border: none;
+}
+
+.btn:hover {
+	background: #566f75;
+}
+
+.submitted {
+  background-color: #4CAF50 !important; 
+  cursor: default;
+}
+
+@media (max-width: 1250px) {
+	.discount {
+		padding: 60px 0;
+	}
+
+	.title {
+		font-size: 30px;
+	}
+
+	.subhead,
+	.text,
+	.label,
+	.link,
+	.input input,
+	.input textarea,
+	.btn,
+	.get,
+	.discountText {
+		font-size: 12px;
+	}
+
+	.content {
+		justify-content: center;
+    flex-direction: column;
+    align-items: center;
+		gap: 40px;
+	}
+
+	.left {
+		align-items: center;
+		width: 90%;
+		text-align: center;
+	}
+
+	.text {
+		margin-bottom: 20px;
+	}
+
+	.item {
+		justify-content: flex-start;
+    text-align: start;
+	}
+
+	.percent {
+		height: 35px;
+		width: 65px;
+	}
+
+	.form {
+		padding: 40px;
+	}
+
+	.btn {
+		padding: 12px 42px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.title {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 768px) {
+	.title {
+		font-size: 24px;
+	}
+
+	.subhead,
+	.text,
+	.label,
+	.link,
+	.input input,
+	.input textarea,
+	.btn,
+	.get,
+	.discountText {
+		font-size: 10px;
+	}
+
+	.percent {
+		height: 30px;
+		width: 60px;
+	}
+
+	.dots {
+		height: 30px;
+		width: 18px;
+	}
+
+	.item {
+		gap: 15px;
+	}
+	
+	.contact {
+		padding: 14px 30px;
+		gap: 10px;
+	}
+
+	.input {
+		width: 310px;
+	}
+
+	.icon {
+		height: 18px;
+		width: 18px;
+	}
+}
+
+@media (max-width: 640px) {
+	.banner {
+		flex-direction: column;
+		width: 90%;
+	}
+
+	.form {
+		padding: 25px;
+	}
+}
+
+@media (max-width: 425px) {
+	.title {
+		font-size: 14px;
+	}
+
+	.input {
+		width: 200px;
+	}
+
+	.percent {
+		height: 26px;
+		width: 60px;
+	}
+}

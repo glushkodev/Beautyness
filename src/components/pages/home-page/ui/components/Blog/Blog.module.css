@@ -157,6 +157,10 @@
 	.blog {
 		padding: 60px 0;
 	}
+
+	.title {
+		font-size: 24px;
+	}
 	
 	.items {
 		justify-content: center;
@@ -197,7 +201,6 @@
 	}
 
 	.title {
-		font-size: 30px;
 		margin-bottom: 24px;
 	}
 
@@ -234,10 +237,6 @@
 	.author,
 	.btn {
 		font-size: 10px;
-	}
-
-	.title {
-		font-size: 24px;
 	}
 
 	.items {

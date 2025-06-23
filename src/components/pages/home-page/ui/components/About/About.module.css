@@ -115,7 +115,7 @@
 	}
 
 	.title {
-    font-size: 38px;
+    font-size: 30px;
     line-height: 120%;
     width: 100%;
 	}
@@ -154,7 +154,7 @@
 
 @media (max-width: 910px) {
 	.title {
-    font-size: 30px;
+    font-size: 24px;
 	}
 
 	.text,
@@ -164,10 +164,6 @@
 }
 
 @media (max-width: 768px) {
-	.title {
-    font-size: 24px;
-	}
-
 	.text,
 	.subtext {
 		font-size: 10px;

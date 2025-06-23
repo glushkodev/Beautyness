@@ -219,7 +219,7 @@
 	}
 
 	.title {
-		font-size: 40px;
+		font-size: 30px;
 	}
 
 	.text,
@@ -239,7 +239,7 @@
 
 @media (max-width: 910px) {
 	.title {
-		font-size: 34px;
+		font-size: 24px;
 	}
 
 	.text,
@@ -256,10 +256,6 @@
 @media (max-width: 768px) {
 	.splitBackground {
 		padding: 60px 0;
-	}
-	
-	.title {
-		font-size: 30px;
 	}
 
 	.text,
