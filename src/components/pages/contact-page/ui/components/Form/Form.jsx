@@ -1,7 +1,5 @@
 import { useState, useRef } from 'react'
 import styles from './Form.module.css'
-import Dots from '../../../../../../assets/dots_ico.svg?react'
-import Percent from '../../../../../../assets/percent_ico.svg?react'
 import User from '../../../../../../assets/user_ico.svg?react'
 import Mail from '../../../../../../assets/mail_ico.svg?react'
 import Phone from '../../../../../../assets/phone_ico.svg?react'
@@ -95,14 +93,10 @@ const Form = () => {
     <section className={styles.forma}>
       <div className={styles.container}>
         <div className={styles.content}>
-          
           <h3 className={styles.subhead}>Запланируйте свое присутствие</h3>
           <h2 className={styles.title}>Записаться на прием</h2>
           <p className={styles.text}>Существует множество вариантов отрывков Lorem Ipsum, но большинство из них подверглись изменениям в той или иной форме.</p>
-            
-
           <form className={styles.form} onSubmit={handleSubmit}>
-
             <div className={styles.inputWrapper}>
               {nameError && <span className={styles.errorText}>Введите имя</span>}
               <div className={styles.input}>

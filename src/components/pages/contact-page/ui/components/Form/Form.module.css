@@ -17,7 +17,6 @@
 	justify-content: center;
 }
 
-
 .subhead {
 	font-family: var(--font-family);
 	font-weight: 600;
@@ -48,8 +47,8 @@
 	text-align: center;
 	color: #555;
 	margin-bottom: 65px;
+	width: 60%;
 }
-
 
 .form {
 	padding: 98px 100px;
@@ -86,6 +85,11 @@
 	font-size: 19px;
 	line-height: 160%;
 	letter-spacing: -0.01em;
+	color: #141414;
+}
+
+.input input::placeholder,
+.input textarea::placeholder {
 	color: #141414;
 }
 
@@ -133,7 +137,7 @@
 }
 
 @media (max-width: 1250px) {
-	.discount {
+	.forma {
 		padding: 60px 0;
 	}
 
@@ -143,41 +147,14 @@
 
 	.subhead,
 	.text,
-	.label,
-	.link,
 	.input input,
 	.input textarea,
-	.btn,
-	.get,
-	.discountText {
+	.btn {
 		font-size: 12px;
-	}
-
-	.content {
-		justify-content: center;
-    flex-direction: column;
-    align-items: center;
-		gap: 40px;
-	}
-
-	.left {
-		align-items: center;
-		width: 90%;
-		text-align: center;
 	}
 
 	.text {
 		margin-bottom: 20px;
-	}
-
-	.item {
-		justify-content: flex-start;
-    text-align: start;
-	}
-
-	.percent {
-		height: 35px;
-		width: 65px;
 	}
 
 	.form {
@@ -193,6 +170,11 @@
 	.title {
 		font-size: 24px;
 	}
+
+	.form,
+	.input {
+		width: 100%;
+	}
 }
 
 @media (max-width: 768px) {
@@ -202,37 +184,15 @@
 
 	.subhead,
 	.text,
-	.label,
-	.link,
 	.input input,
 	.input textarea,
-	.btn,
-	.get,
-	.discountText {
+	.btn {
 		font-size: 10px;
-	}
-
-	.percent {
-		height: 30px;
-		width: 60px;
-	}
-
-	.dots {
-		height: 30px;
-		width: 18px;
-	}
-
-	.item {
-		gap: 15px;
 	}
 	
 	.contact {
 		padding: 14px 30px;
 		gap: 10px;
-	}
-
-	.input {
-		width: 310px;
 	}
 
 	.icon {
@@ -246,28 +206,18 @@
 }
 
 @media (max-width: 640px) {
-	.banner {
-		flex-direction: column;
-		width: 90%;
-	}
-
 	.form {
 		padding: 25px;
+	}
+
+	.text {
+		width: 100%;
 	}
 }
 
 @media (max-width: 425px) {
 	.title {
 		font-size: 14px;
-	}
-
-	.input {
-		width: 200px;
-	}
-
-	.percent {
-		height: 26px;
-		width: 60px;
 	}
 
 	.errorText {
