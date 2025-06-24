@@ -275,9 +275,13 @@
 
 @media (max-width: 640px) {
 	.img {
-		width: 330px;
-    height: 280px;
+		width: 90%;
+    height: 90%;
 		margin-bottom: 40px;
+	}
+
+	.btn {
+		width: 90%;
 	}
 
 	.title {
@@ -296,8 +300,12 @@
 
 @media (max-width: 425px) {
 	.img {
-		width: 260px;
-    height: 230px;
+		width: 100%;
+    height: 100%;
+	}
+
+	.btn {
+		width: 100%;
 	}
 
 	.title {

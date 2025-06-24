@@ -1,5 +1,6 @@
 import styles from './Logo.module.css';
 import LogoIcon from '../../../assets/logo.svg?react';
+import { Link } from 'react-router-dom';
 
 const Logo = ({ className = '', textClassName = '', variant = '' }) => {
   const iconClass = variant === 'header'
@@ -14,10 +15,10 @@ const Logo = ({ className = '', textClassName = '', variant = '' }) => {
   const textClass = `${styles.text} ${textClassName}`;
 
   return (
-    <div className={containerClass}>
+    <Link to={'/'} className={containerClass}>
       <LogoIcon className={iconClass} />
       <span className={textClass}>Beautyness</span>
-    </div>
+    </Link>
   );
 };
 

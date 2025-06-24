@@ -237,8 +237,8 @@
 	}
 
 	.img {
-		width: 580px;
-		height: 480px;
+		width: 80%;
+		height: 80%;
 	}
 
 	.listLeft,
@@ -255,16 +255,17 @@
 
 	.btn {
     padding: 12px 42px;
+		width: 80%;
   }
 
 	.elems,
 	.elemsRight {
-		width: 100%;
+		width: 80%;
 		gap: 50px;
 	}
 
 	.list {
-		width: 90%;
+		width: 80%;
 		align-items: stretch;
 	}
 
@@ -289,8 +290,21 @@
 
 @media (max-width: 640px) {
 	.img {
-		width: 330px;
-    height: 280px;
+		width: 100%;
+		height: 100%;
+	}
+
+	.btn {
+		width: 100%;
+	}
+
+	.elems,
+	.elemsRight {
+		width: 100%;
+	}
+
+	.list {
+		width: 100%;
 	}
 
 	.elems,
@@ -302,11 +316,6 @@
 @media (max-width: 425px) {
 	.head {
 		font-size: 14px;
-	}
-
-	.img {
-		width: 260px;
-		height: 230px;
 	}
 
 	.subhead,

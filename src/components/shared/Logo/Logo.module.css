@@ -2,12 +2,19 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.logo:hover .text  {
+  color: #7a9ca5;
 }
 
 .text {
   font-family: var(--second-family);
   font-weight: 700;
   line-height: 125%;
+  transition: all 0.4s ease;
 }
 
 .header .text {

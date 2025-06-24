@@ -245,7 +245,7 @@
 
 	.left {
 		align-items: center;
-		width: 90%;
+		width: 100%;
 		text-align: center;
 	}
 
@@ -314,8 +314,9 @@
 		gap: 10px;
 	}
 
-	.input {
-		width: 310px;
+	.input,
+	.form {
+		width: 100%;
 	}
 
 	.icon {
@@ -331,7 +332,7 @@
 @media (max-width: 640px) {
 	.banner {
 		flex-direction: column;
-		width: 90%;
+		width: 100%;
 	}
 
 	.form {
@@ -342,10 +343,6 @@
 @media (max-width: 425px) {
 	.title {
 		font-size: 14px;
-	}
-
-	.input {
-		width: 200px;
 	}
 
 	.percent {

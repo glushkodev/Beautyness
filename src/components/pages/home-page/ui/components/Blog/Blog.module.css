@@ -167,15 +167,11 @@
 	}
 
 	.item {
-		width: 90%;
-	}
-
-	.img {
-		height: 500px;
+		width: 60%;
 	}
 
 	.btn {
-		width: 90%;
+		width: 60%;
 	}
 
 	.topic {
@@ -197,7 +193,7 @@
 
 @media (max-width: 910px) {
 	.img {
-		height: 400px;
+		height: 100%;
 	}
 
 	.title {
@@ -243,8 +239,12 @@
 		gap: 30px;
 	}
 
-	.img {
-		height: 350px;
+	.item {
+		width: 100%;
+	}
+
+	.btn {
+		width: 100%;
 	}
 
 	.btm {
@@ -252,17 +252,7 @@
 	}
 }
 
-@media (max-width: 640px) {
-	.img {
-		height: 300px;
-	}
-}
-
 @media (max-width: 425px) {
-	.img {
-		height: 230px;
-	}
-
 	.topic,
 	.title {
 		font-size: 14px;

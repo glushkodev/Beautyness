@@ -117,11 +117,11 @@
 	}
 
 	.item {
-		width: 90%;
+		width: 80%;
 	}
 
 	.img {
-		height: 450px;
+		height: 100%;
 	}
 
 	.btn {
@@ -130,10 +130,6 @@
 }
 
 @media (max-width: 910px) {
-	.img {
-		height: 320px;
-	}
-
 	.text,
 	.btn {
 		font-size: 12px;
@@ -144,14 +140,13 @@
 	}
 }
 
-
 @media (max-width: 768px) {
 	.items {
 		gap: 40px;
 	}
 
 	.item {
-		width: 90%;
+		width: 100%;
 	}
 
 	.title {
@@ -161,11 +156,5 @@
 	.text,
 	.btn {
 		font-size: 10px;
-	}
-}
-
-@media (max-width: 425px) {
-	.img {
-		height: 230px;
 	}
 }
