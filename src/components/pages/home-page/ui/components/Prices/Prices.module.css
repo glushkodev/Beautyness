@@ -1,0 +1,323 @@
+.prices {
+	padding: 145px 0;
+	background: #fff;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.subhead {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 154%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #5c8692;
+	margin-bottom: 10px;
+}
+
+.head {
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 130%;
+	letter-spacing: -0.01em;
+	text-align: center;
+	color: #141414;
+	margin-bottom: 50px;
+}
+
+.elems,
+.elemsRight {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+}
+
+.bg {
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	bottom: -15%;
+	z-index: 0;
+}
+
+.img {
+	width: 592px;
+	height: 640px;
+	z-index: 1;
+}
+
+.listRight,
+.listLeft {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 30px 0 0 60px;
+	gap: 35px;
+}
+
+.listLeft {
+	padding: 125px 60px 0 0;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 5px;
+	padding-bottom: 22px;
+	border-bottom: 2px solid rgba(155, 183, 191, 0.5);
+}
+
+.item:not(:first-child) {
+	margin-top: 18px;
+}
+
+.header {
+	display: flex;
+	width: 100%; 
+	align-items: center;
+}
+
+.title,
+.price {
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 130%;
+	color: #141414;
+	white-space: nowrap;
+}
+
+.dots {
+  flex-grow: 1;
+  height: 1px;
+  position: relative;
+  margin: 0 15px;
+}
+
+.dots::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px dotted #555;
+  transform: translateY(-50%);
+}
+
+.descr {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 165%;
+	letter-spacing: 0.02em;
+	color: #555;
+}
+
+.btn {
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 125%;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #141414;
+	border: 2px solid #5c8692;
+	padding: 18px 42px;
+	text-decoration: none;
+	transition: all 0.4s ease;
+}
+
+.btn:hover {
+	background-color: #5c8692;
+	color: #fff;
+}
+
+@media (max-width: 1330px) {
+	.prices {
+		padding: 80px 0;
+	}
+
+	.head {
+		font-size: 24px;
+	}
+
+	.subhead,
+	.title,
+	.price {
+		font-size: 15px;
+	}
+
+	.descr {
+		font-size: 14px;
+	}
+
+	.img {
+		width: 470px;
+    height: 560px;
+	}
+
+	.bg {
+		width: 140px;
+    height: 140px;
+    bottom: -13%;
+	}
+
+	.listLeft {
+		padding: 90px 60px 0 0;
+	}
+
+	.listRight {
+		padding: 0px 0 0 60px;
+	}
+}
+
+@media (max-width: 1050px) {
+	.descr {
+		font-size: 13px;
+	}
+	.img {
+		width: 444px;
+		height: 530px;
+	}
+
+	.bg {
+		width: 110px;
+		height: 110px;
+		bottom: -11%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.prices {
+		padding: 60px 0;
+	}
+
+	.elems {
+		align-items: center;
+		flex-direction: column;
+		gap: 20px;
+		margin-bottom: 40px;
+	}
+
+	.elemsRight {
+		align-items: center;
+    flex-direction: column-reverse;
+		gap: 20px;
+	}
+
+	.head {
+		margin-bottom: 40px;
+	}
+
+	.img {
+		width: 580px;
+		height: 480px;
+	}
+
+	.listLeft,
+	.listRight {
+		padding: 0;
+		align-items: center;
+		width: 100%;
+		gap: 30px;
+	}
+
+	.bg {
+		display: none;
+	}
+
+	.btn {
+    padding: 12px 42px;
+  }
+
+	.elems,
+	.elemsRight {
+		width: 100%;
+		gap: 50px;
+	}
+
+	.list {
+		width: 90%;
+		align-items: stretch;
+	}
+
+	.dots::before {
+		border-bottom: 2px dotted #555;
+	}
+
+	.item {
+		border-bottom: 1px solid rgba(155, 183, 191, 0.5);
+	}
+}
+
+@media (max-width: 768px) {
+	.subhead,
+	.title,
+	.price,
+	.btn,
+	.descr {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 640px) {
+	.img {
+		width: 330px;
+    height: 280px;
+	}
+
+	.elems,
+	.elemsRight {
+		gap: 30px;
+	}
+}
+
+@media (max-width: 425px) {
+	.head {
+		font-size: 14px;
+	}
+
+	.img {
+		width: 260px;
+		height: 230px;
+	}
+
+	.subhead,
+	.title,
+	.price,
+	.btn,
+	.descr {
+		font-size: 10px;
+	}
+
+	.head {
+		margin-bottom: 30px;
+	}
+}

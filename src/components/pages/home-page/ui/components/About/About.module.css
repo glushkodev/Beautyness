@@ -147,12 +147,12 @@
 
 	.img {
 	  margin-bottom: 30px;
-		width: 480px;
+		width: 580px;
     height: 480px;
 	}
 }
 
-@media (max-width: 910px) {
+@media (max-width: 1024px) {
 	.title {
     font-size: 24px;
 	}

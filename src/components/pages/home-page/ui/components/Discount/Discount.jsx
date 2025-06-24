@@ -80,15 +80,15 @@ const Discount = () => {
   }
 
   const handleNameChange = () => {
-    setNameError(false);
+    setNameError(false)
   };
 
   const handleEmailChange = () => {
-    setEmailError(false);
+    setEmailError(false)
   };
 
   const handleServiceChange = () => {
-    setServiceError(false);
+    setServiceError(false)
   };
 
   return (
