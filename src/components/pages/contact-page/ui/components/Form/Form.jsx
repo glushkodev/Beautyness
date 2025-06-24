@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import styles from './Discount.module.css'
+import styles from './Form.module.css'
 import Dots from '../../../../../../assets/dots_ico.svg?react'
 import Percent from '../../../../../../assets/percent_ico.svg?react'
 import User from '../../../../../../assets/user_ico.svg?react'
@@ -8,7 +8,7 @@ import Phone from '../../../../../../assets/phone_ico.svg?react'
 import Book from '../../../../../../assets/book_ico.svg?react'
 import Edit from '../../../../../../assets/edit_ico.svg?react'
 
-const Discount = () => {
+const Form = () => {
   const [submitted, setSubmitted] = useState(false) 
   const [phone, setPhone] = useState('')
   const [phoneError, setPhoneError] = useState(false)
@@ -92,37 +92,15 @@ const Discount = () => {
   };
 
   return (
-    <section className={styles.discount}>
+    <section className={styles.forma}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.left}>
-            <h3 className={styles.subhead}>Фиксированная скидка</h3>
-            <h2 className={styles.title}>Получите скидку до 50% на самые популярные услуги...</h2>
-            <p className={styles.text}>Существует множество вариантов отрывков Lorem Ipsum, но большинство из них подверглись изменениям в той или иной форме, в частности из-за добавления юмора или случайных слов.</p>
-            <div className={styles.banner}>
-              <div className={styles.contact}>
-                <div className={styles.item}>
-                  <Dots className={styles.dots} />
-                  <div className={styles.contacts} >
-                    <span className={styles.label}>Пишите нам :</span>
-                    <a className={styles.link} href="mailto:support@beauty.com">support@beauty.com</a>
-                  </div>
-                </div>
-                <div className={styles.item}>
-                  <Dots className={styles.dots} />
-                  <div className={styles.contacts} >
-                    <span className={styles.label}>Звоните нам :</span>
-                    <a className={styles.link} href="tel:+375441234567">+375 (44) 123-45-67</a>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.right}>
-                <span className={styles.get}>– Получите –</span>
-                <Percent className={styles.percent} />
-                <span className={styles.discountText}>Скидку</span>
-              </div>
-            </div>
-          </div>
+          
+          <h3 className={styles.subhead}>Запланируйте свое присутствие</h3>
+          <h2 className={styles.title}>Записаться на прием</h2>
+          <p className={styles.text}>Существует множество вариантов отрывков Lorem Ipsum, но большинство из них подверглись изменениям в той или иной форме.</p>
+            
+
           <form className={styles.form} onSubmit={handleSubmit}>
 
             <div className={styles.inputWrapper}>
@@ -201,4 +179,4 @@ const Discount = () => {
   )
 }
 
-export default Discount
+export default Form
