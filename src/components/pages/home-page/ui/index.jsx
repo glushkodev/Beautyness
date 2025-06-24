@@ -1,4 +1,3 @@
-import styles from './index.module.css'
 import Welcome from "./components/welcome/Welcome"
 import About from './components/About/About'
 import Benefits from './components/Benefits/Benefits'
@@ -10,7 +9,7 @@ import Prices from './components/Prices/Prices'
 
 const HomePage = () => {
 	return (
-		<div className={styles.welcome}>
+		<div>
 			<Welcome />
 			<Services />
 			<About />
