@@ -98,10 +98,6 @@
 	justify-content: center;
 }
 
-.ico {
-
-}
-
 .context {
 	display: flex;
 	flex-direction: column;
@@ -134,3 +130,111 @@
 	color: #7a9ca5;
 }
 
+@media (max-width: 1300px) {
+	.content {
+		gap: 110px;
+	}
+
+	.title {
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.about {
+		padding: 60px 0;
+	}
+
+	.bg {
+		display: none;
+	}
+
+	.content {
+		gap: 50px;
+	}
+
+	.title {
+		font-size: 30px;
+	}
+
+	.subtext,
+	.text,
+	.subtitle,
+	.link {
+		font-size: 12px;
+	}
+
+	.img {
+		width: 580px;
+		height: 480px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.content {
+		flex-direction: column-reverse;
+		justify-content: center;
+		gap: 40px;
+	}
+
+	.right {
+		align-items: center;
+		text-align: center;
+	}
+
+	.text {
+		width: 80%;
+	}
+
+	.left {
+		text-align: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.title {
+		font-size: 24px;
+	}
+
+	.subtext,
+	.text,
+	.subtitle,
+	.link {
+		font-size: 10px;
+	}
+
+	.img {
+		width: 90%;
+		height: 90%;
+	}
+
+	.icon {
+		width: 50px;
+    height: 50px;
+	}
+
+	.ico {
+		width: 20px;
+		height: 25px;
+	}
+
+	.item {
+		gap: 20px;
+	}
+
+	.text {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 425px) {
+	.title {
+		font-size: 14px;
+	}
+
+	.img {
+		width: 100%;
+		height: 100%;
+	}
+}
