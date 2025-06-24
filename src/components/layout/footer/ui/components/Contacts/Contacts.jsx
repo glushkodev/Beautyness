@@ -7,7 +7,7 @@ const Contacts = () => {
 			<div className={styles.items}>
 				<div className={styles.item}>
 					<span className={styles.item__title}>Адрес:</span>
-					<a className={styles.link} href="https://maps.google.com/" target='blank'>yл. Тестовоая 12А, г. Минск</a>
+					<a className={styles.link} href="https://maps.google.com/" target='_blank' rel="noopener noreferrer">yл. Тестовоая 12А, г. Минск</a>
 				</div>
 				<div className={styles.item}>
 					<span className={styles.item__title}>Эл. почта:</span>
