@@ -1,8 +1,17 @@
+import PageHeader from "../../../shared/PageHeader/PageHeader"
+// import About from './components/About/About'
+// import Form from "./components/Form/Form"
 
 const LocationsPage = () => {
 	return (
 		<div>
-			<h1>Местоположение</h1>
+			<div>
+				<PageHeader 
+					subtitle="Мы здесь!"
+					title="Наши местоположения"
+				/>
+				
+			</div>
 		</div>
 	)
 }

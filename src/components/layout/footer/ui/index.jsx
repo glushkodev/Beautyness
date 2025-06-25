@@ -19,6 +19,7 @@ const Footer = () => {
 					<WorkHours />
 				</div>
 			</div>
+			<div className={styles.copyright}>&copy; 2025 Beautyness. Все права защищены. <br />Разработчик Глушко Екатерина.</div>
 		</footer>
 	)
 }
