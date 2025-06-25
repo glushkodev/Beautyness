@@ -1,6 +1,5 @@
 import styles from './index.module.css'
 import PageHeader from '../../../shared/PageHeader/PageHeader'
-
 import Back from '../../../../assets/contacts_bg.png'
 import Img from '../../../../assets/locations_img1.png'
 import Img2 from '../../../../assets/locations_img2.png'
@@ -8,9 +7,7 @@ import Img3 from '../../../../assets/locations_img3.png'
 import EmailIco from '../../../../assets/email_ico.svg?react'
 import HouseIco from '../../../../assets/house_ico.svg?react'
 import PhoneIco from '../../../../assets/phon_ico.svg?react'
-
 import { Link } from 'react-router-dom'
-
 
 const LocationsPage = () => {
 	return (
@@ -21,7 +18,6 @@ const LocationsPage = () => {
 			/>
 			<div className={styles.container}>
 				<div className={styles.content}>
-
 					<div className={styles.elem}>
 						<div className={styles.left}>
 							<img className={styles.back} src={Back} alt="Background image" />
@@ -57,11 +53,7 @@ const LocationsPage = () => {
 						</div>
 					</div>
 
-					<div className={styles.elem}>
-						<div className={styles.left}>
-							<img className={styles.back} src={Back} alt="Background image" />
-							<img className={styles.img} src={Img2} alt="Main image" />
-						</div>
+					<div className={`${styles.elem} ${styles.reversed}`}>
 						<div className={styles.right}>
 							<h3 className={styles.subtext}>Республика Беларусь</h3>
 							<h2 className={styles.city}>Брест</h2>
@@ -89,6 +81,10 @@ const LocationsPage = () => {
 								</div>
 							</div>
 							<Link to="/services" className={styles.btn}>Забронировать</Link>
+						</div>
+						<div className={styles.left}>
+							<img className={styles.back} src={Back} alt="Background image" />
+							<img className={styles.img} src={Img2} alt="Main image" />
 						</div>
 					</div>
 
@@ -126,8 +122,6 @@ const LocationsPage = () => {
 							<Link to="/services" className={styles.btn}>Забронировать</Link>
 						</div>
 					</div>
-
-
 				</div>
 			</div>
 		</div>
