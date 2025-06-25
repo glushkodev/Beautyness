@@ -1,8 +1,16 @@
+import PageHeader from "../../../shared/PageHeader/PageHeader"
+import Values from "./components/Values/Values"
 
 const AboutPage = () => {
 	return (
 		<div>
-			<h1>О нас</h1>
+			<div>
+				<PageHeader 
+					subtitle="Короткая история о нас"
+					title="Большая история, стоящая за нашим центром красоты"
+				/>
+				<Values />
+			</div>
 		</div>
 	)
 }
