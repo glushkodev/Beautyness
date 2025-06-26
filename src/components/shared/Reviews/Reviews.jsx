@@ -1,8 +1,8 @@
 import styles from './Reviews.module.css';
-import ReviewIcon from '../../../../../../assets/reviews_icon.svg?react';
-import ReviewAuthor from '../../../../../../assets/reviews_author.png';
-import ReviewAuthor2 from '../../../../../../assets/reviews_author2.png';
-import StarRating from '../StarRating/StarRating';
+import ReviewIcon from '../../../assets/reviews_icon.svg?react';
+import ReviewAuthor from '../../../assets/reviews_author.png';
+import ReviewAuthor2 from '../../../assets/reviews_author2.png';
+import StarRating from '../../pages/home-page/ui/components/StarRating/StarRating';
 
 const Reviews = () => {
   return (

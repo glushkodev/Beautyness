@@ -1,6 +1,7 @@
 import PageHeader from "../../../shared/PageHeader/PageHeader"
 import Style from "./components/Style/Style"
 import Values from "./components/Values/Values"
+import Reviews from '../../../shared/Reviews/Reviews'
 
 const AboutPage = () => {
 	return (
@@ -12,6 +13,7 @@ const AboutPage = () => {
 				/>
 				<Values />
 				<Style />
+				<Reviews />
 			</div>
 		</div>
 	)
