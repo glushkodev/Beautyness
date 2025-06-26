@@ -1,4 +1,5 @@
 import PageHeader from "../../../shared/PageHeader/PageHeader"
+import Style from "./components/Style/Style"
 import Values from "./components/Values/Values"
 
 const AboutPage = () => {
@@ -10,6 +11,7 @@ const AboutPage = () => {
 					title="Большая история, стоящая за нашим центром красоты"
 				/>
 				<Values />
+				<Style />
 			</div>
 		</div>
 	)

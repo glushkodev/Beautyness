@@ -1,0 +1,168 @@
+.style {
+	padding: 190px 0;
+	background-color: #ebf3f5;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.left {
+	position: relative;
+}
+
+.bg {
+	width: 547px;
+	height: 500px;
+	background-color: #1e2c30;
+	z-index: 1;
+	position: relative;
+}
+
+.img {
+	position: absolute;
+	z-index: 2;
+	width: 480px;
+	height: 610px;
+	top: -55px;
+	left: 68px;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	padding: 74px 72px;
+	background-color: #1e2c30;
+}
+
+.subtext {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 154%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.title {
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 130%;
+	letter-spacing: -0.01em;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.text {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 175%;
+	color: #fff;
+}
+
+@media (max-width: 1300px) {
+	.title {
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.style {
+		padding: 60px 0;
+	}
+
+	.title {
+		font-size: 30px;
+	}
+
+	.subtext,
+	.text {
+		font-size: 12px;
+	}
+
+	.img {
+	    height: 500px;
+    position: static;
+	}
+
+	.bg {
+		display: none;
+	}
+
+	.right {
+		padding: 70px 50px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.content {
+		flex-direction: column-reverse;
+		gap: 30px;
+	}
+
+	.right {
+		background-color: transparent;
+		align-items: center;
+		text-align: center;
+		padding: 0 70px;
+	}
+
+	.img {
+		width: 100%;
+	}
+
+	.title,
+	.text,
+	.subtext {
+		color: #5c8692;
+	}
+
+	.title {
+		color: #141414;
+	}
+
+	.text {
+    color: #555;
+	}
+}
+
+@media (max-width: 768px) {
+	.title {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+	.subtext,
+	.text	{
+		font-size: 10px;
+	}
+
+	.right {
+		padding: 0;
+	}
+}
+
+@media (max-width: 425px) {
+	.title {
+		font-size: 14px;
+	}
+
+	.img {
+		height: 100%;
+	}
+}
