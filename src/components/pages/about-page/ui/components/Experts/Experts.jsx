@@ -13,7 +13,9 @@ const Experts = () => {
           <h2 className={styles.title}>Удивительные женщины, стоящие за Beautyness</h2>
           <div className={styles.items}>
             <div className={styles.item}>
-              <img className={styles.photo} src={Photo1} alt="Expert Photo" />
+              <div className={styles.photoWrapper}>
+                <img className={styles.photo} src={Photo1} alt="Expert Photo" />
+              </div>
               <div className={styles.context}>
                 <h3 className={styles.name}>Алина Соколова</h3>
                 <h4 className={styles.subtitle}>Эксперт по красоте</h4>
@@ -24,7 +26,9 @@ const Experts = () => {
               </div>        
             </div>
             <div className={styles.item}>
-              <img className={styles.photo} src={Photo2} alt="Expert Photo" />
+              <div className={styles.photoWrapper}>
+								<img className={styles.photo} src={Photo2} alt="Expert Photo" />
+							</div>
               <div className={styles.context}>
                 <h3 className={styles.name}>Екатерина Морозова</h3>
                 <h4 className={styles.subtitle}>Эксперт по красоте</h4>
@@ -35,7 +39,9 @@ const Experts = () => {
               </div>        
             </div>
             <div className={styles.item}>
-              <img className={styles.photo} src={Photo3} alt="Expert Photo" />
+              <div className={styles.photoWrapper}>
+								<img className={styles.photo} src={Photo3} alt="Expert Photo" />
+							</div>
               <div className={styles.context}>
                 <h3 className={styles.name}>Ольга Крылова</h3>
                 <h4 className={styles.subtitle}>Эксперт по красоте</h4>

@@ -57,6 +57,30 @@
 	width: 33%;
 }
 
+.photoWrapper {
+  width: 370px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.item:hover .photo {
+  transform: scale(1.1);
+}
+
+.item:hover {
+	box-shadow: 0px 4px 20px -13px #7c7c7c;
+	cursor: pointer;
+	border-radius: 2%;
+}
+
 .context {
 	display: flex;
 	flex-direction: column;
@@ -94,11 +118,6 @@
 	text-align: center;
 	color: #555;
 	margin-bottom: 20px;
-}
-
-.photo {
-	width: 370px;
-	height: 350px;
 }
 
 @media (max-width: 1300px) {
@@ -198,7 +217,7 @@
 		text-align: center;
 	}
 
-	.photo {
+	.photoWrapper {
 		width: 100%;
 		height: 100%;
 	}
