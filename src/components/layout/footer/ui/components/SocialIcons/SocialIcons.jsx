@@ -7,16 +7,16 @@ import InstIcon from '../../../../../../assets/inst_ico.svg?react';
 const SocialIcons = () => {
 	return (
 		<div className={styles.icons}>
-			<a className={styles.link} href="https://www.facebook.com/">
+			<a className={styles.link} href="https://www.facebook.com/" target='_blank' rel="noopener noreferrer">
 				<FbIcon className={styles.facebook}/>
 			</a>
-			<a className={styles.link} href="https://x.com/">
+			<a className={styles.link} href="https://x.com/" target='_blank' rel="noopener noreferrer">
 				<TwIcon className={styles.x}/>
 			</a>
-			<a className={styles.link} href="https://www.linkedin.com/">
+			<a className={styles.link} href="https://www.linkedin.com/" target='_blank' rel="noopener noreferrer">
 				<InIcon className={styles.linkedin}/>
 			</a>
-			<a className={styles.link} href="https://www.instagram.com/">
+			<a className={styles.link} href="https://www.instagram.com/" target='_blank' rel="noopener noreferrer">
 				<InstIcon className={styles.instagram}/>
 			</a>
 		</div>

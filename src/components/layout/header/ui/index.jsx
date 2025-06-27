@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import styles from './index.module.css'
 import Nav from './components/Nav/Nav'
-import SocialIcons from './components/SocialIcons/SocialIcons'
+import SocialIcons from '../../../shared/SocialIcons/SocialIcons'
 import ReserveButton from './components/ReserveBtn/ReserveButton'
 import Call from './components/Call/Call'
 import Logo from '../../../shared/Logo/Logo'
 import NavToogle from './components/NavToogle/NavToogle'
 import NavMobile from './components/NavMobile/NavMobile'
-
 
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
