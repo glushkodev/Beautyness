@@ -3,9 +3,11 @@ import FbIcon from '../../../assets/fb_ico.svg?react';
 import TwIcon from '../../../assets/tw_ico.svg?react';
 import InIcon from '../../../assets/in_ico.svg?react';
 
-const SocialIcons = () => {
+const SocialIcons = ({ variant = '' }) => {
+	const iconClass = `${styles.icons} ${variant === 'header' ? styles.headerIcons : ''}`;
+
 	return (
-		<div className={styles.icons}>
+		<div className={iconClass}>
 			<a href="https://www.facebook.com/" target='_blank' rel="noopener noreferrer">
 				<FbIcon className={styles.facebook} />
 			</a>

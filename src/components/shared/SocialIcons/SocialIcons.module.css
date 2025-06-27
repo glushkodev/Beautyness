@@ -30,7 +30,7 @@
 }
 
 @media (max-width: 1630px) {
-	.icons {
+	.headerIcons {
 		display: none;
 	}
 }

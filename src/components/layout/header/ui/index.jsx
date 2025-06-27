@@ -29,7 +29,7 @@ const Header = () => {
 				<Nav />
 				<NavToogle onClick={toggleMenu} isActive={isMenuOpen} />
         <NavMobile isOpen={isMenuOpen} onClose={closeMenu} />
-				<SocialIcons />
+				<SocialIcons variant="header"/>
 				<ReserveButton />
 			</div>
 		</header>
