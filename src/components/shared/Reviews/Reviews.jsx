@@ -4,6 +4,9 @@ import StarRating from '../../pages/home-page/ui/components/StarRating/StarRatin
 import { collection } from 'firebase/firestore'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { db } from '../../../firebase'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { A11y, Autoplay } from 'swiper/modules'
+import 'swiper/css'
 
 const Reviews = () => {
   const q = collection(db, 'reviews')
@@ -21,26 +24,44 @@ const Reviews = () => {
           <h3 className={styles.subhead}>Отзывы</h3>
           <h2 className={styles.title}>Что говорят наши клиенты...</h2>
           <div className={styles.items}>
+            <Swiper
+              modules={[A11y, Autoplay]}
+              spaceBetween={30}
+              slidesPerView={1}    
+              centeredSlides={true}           
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              breakpoints={{
+                1025: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                  centeredSlides: false,
+                },
+              }}
+              className={styles.swiper}
+            >
             {reviews?.map((review, index) => (
-              <div key={index} className={styles.item}>
-                <span className={styles.text}>“ {review.text} “</span>
-                <div className={styles.btm}>
-                  <div className={styles.author}>
-                    <img
-                      className={styles.photo}
-                      src={review.photo}
-                      alt={review.name}
-                    />
-                    <div className={styles.about}>
-                      <StarRating rating={review.rate} />
-                      <span className={styles.name}>{review.name}</span>
-                      <span className={styles.sity}>{review.city}</span>
+              <SwiperSlide key={index}>
+                <div className={styles.item}>
+                  <span className={styles.text}>{review.text}</span>
+                  <div className={styles.btm}>
+                    <div className={styles.author}>
+                      <img
+                        className={styles.photo}
+                        src={review.photo}
+                        alt={review.name}
+                      />
+                      <div className={styles.about}>
+                        <StarRating rating={review.rate} />
+                        <span className={styles.name}>{review.name}</span>
+                        <span className={styles.sity}>{review.city}</span>
+                      </div>
                     </div>
+                    <ReviewIcon className={styles.img} />
                   </div>
-                  <ReviewIcon className={styles.img} />
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
+            </Swiper>
           </div>        
         </div>
       </div>
