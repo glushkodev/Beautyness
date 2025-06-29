@@ -231,7 +231,9 @@
 }
 
 @media (max-width: 425px) {
-	.title {
+	.title,
+	.error,
+	.spinner  {
 		font-size: 14px;
 		margin-bottom: 20px;
 	}

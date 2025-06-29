@@ -46,6 +46,8 @@
 	align-items: flex-start;
 	justify-content: center;
 	position: relative;
+	width: 100%;
+	flex-direction: row;
 }
 
 .bg {
@@ -57,29 +59,33 @@
 }
 
 .img {
-	width: 592px;
+	width: 600px;
 	height: 640px;
 	z-index: 1;
+	flex-shrink: 0;
+	flex: 1;
 }
 
 .listRight,
 .listLeft {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	padding: 30px 0 0 60px;
+	align-items: stretch;
+	justify-content: flex-start;
+	padding: 5px 0 0 60px;
 	gap: 35px;
+	width: 100%;
+	flex: 1;
 }
 
 .listLeft {
-	padding: 125px 60px 0 0;
+	padding: 125px 50px 0 0;
 }
 
 .list {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: stretch;
 	justify-content: center;
 }
 
@@ -152,11 +158,37 @@
 	padding: 18px 42px;
 	text-decoration: none;
 	transition: all 0.4s ease;
+	width: 40%;
 }
 
 .btn:hover {
 	background-color: #5c8692;
 	color: #fff;
+}
+
+.error {
+	font-family: var(--second-family);
+  text-align: center;
+  font-size: 18px;
+	color: #c0392b;
+  padding: 40px 0;
+}
+
+.spinner {
+	font-family: var(--second-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  font-size: 18px;
+  color: #888;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
 }
 
 @media (max-width: 1330px) {
@@ -179,38 +211,36 @@
 	}
 
 	.img {
-		width: 470px;
+		width: 500px;
     height: 560px;
 	}
 
 	.bg {
-		width: 140px;
-    height: 140px;
-    bottom: -13%;
-	}
-
-	.listLeft {
-		padding: 90px 60px 0 0;
+		display: none;
 	}
 
 	.listRight {
-		padding: 0px 0 0 60px;
+		padding: 30px 0 0 50px;
 	}
+
+	.listLeft {
+		padding: 90px 50px 0 0;
+	}
+
+	.btn {
+    padding: 12px 42px;
+		width: 50%;
+  }
 }
 
 @media (max-width: 1050px) {
 	.descr {
 		font-size: 13px;
 	}
+	
 	.img {
-		width: 444px;
-		height: 530px;
-	}
-
-	.bg {
-		width: 110px;
-		height: 110px;
-		bottom: -11%;
+		width: 480px;
+		height: 490px;
 	}
 }
 
@@ -249,12 +279,7 @@
 		gap: 30px;
 	}
 
-	.bg {
-		display: none;
-	}
-
 	.btn {
-    padding: 12px 42px;
 		width: 80%;
   }
 
@@ -314,7 +339,9 @@
 }
 
 @media (max-width: 425px) {
-	.head {
+	.head,
+	.error,
+	.spinner {
 		font-size: 14px;
 	}
 

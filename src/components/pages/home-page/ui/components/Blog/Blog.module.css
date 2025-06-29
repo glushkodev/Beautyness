@@ -292,7 +292,9 @@
 
 @media (max-width: 425px) {
 	.topic,
-	.title {
+	.title,
+	.error,
+	.spinner  {
 		font-size: 14px;
 	}
 
