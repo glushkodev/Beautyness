@@ -1,10 +1,16 @@
 import styles from './Blog.module.css'
-import BlogImg1 from '../../../../../../assets/blog_img.png'
-import BlogImg2 from '../../../../../../assets/blog_img2.png'
-import BlogImg3 from '../../../../../../assets/blog_img3.png'
+import { collection, query, limit } from 'firebase/firestore'
+import { useCollection } from 'react-firebase-hooks/firestore'
+import { db } from '../../../../../../firebase'
 import { Link } from 'react-router-dom'
 
 const Blog = () => {
+  const blogQuery = query(collection(db, 'blog'), limit(3))
+  const [snapshot, loading, error] = useCollection(blogQuery)
+
+  if (loading) return <div className={styles.spinner}>Загрузка...</div>
+  if (error) return <div className={styles.error}>Ошибка загрузки</div>
+  
   return (
     <section className={styles.blog}>
       <div className={styles.container}>
@@ -12,45 +18,24 @@ const Blog = () => {
           <h3 className={styles.subhead}>Наш блог</h3>
           <h2 className={styles.title}>Последние обновления</h2>
           <div className={styles.items}>
-            <div className={styles.item}>
-              <div className={styles.wrapper}>
-                <img className={styles.img} src={BlogImg1} alt="Blog Image" />
-              </div>
-              <div className={styles.btm}>
-                <div className={styles.subtopic}>
-                  <span className={styles.date}>25 июня 2025</span>
-                  <span className={styles.author}>Алина Соколова</span>
+            {snapshot?.docs.map(doc => {
+              const blog = doc.data()
+              return (
+                <div key={doc.id} className={styles.item}>
+                  <div className={styles.wrapper}>
+                    <img className={styles.img} src={blog.img} alt={blog.title} />
+                  </div>
+                  <div className={styles.btm}>
+                    <div className={styles.subtopic}>
+                      <span className={styles.date}>{blog.date}</span>
+                      <span className={styles.author}>{blog.author}</span>
+                    </div>
+                    <h3 className={styles.topic}>{blog.title}</h3>
+                    <p className={styles.text}>{blog.description}</p>
+                  </div>
                 </div>
-                <h3 className={styles.topic}>Энергоэффективность гидротерапии</h3>
-                <p className={styles.text}>Смысл использования Lorem Ipsum в том, что придание ему читабельного вида приведет к концу.</p>
-              </div>
-            </div>
-            <div className={styles.item}>
-              <div className={styles.wrapper}>
-                <img className={styles.img} src={BlogImg2} alt="Blog Image" />
-              </div>
-              <div className={styles.btm}>
-                <div className={styles.subtopic}>
-                  <span className={styles.date}>11 июня 2025</span>
-                  <span className={styles.author}>Артем Волков</span>
-                </div>
-                <h3 className={styles.topic}>Советы по улучшению тела с помощью очищения</h3>
-                <p className={styles.text}>Смысл использования Lorem Ipsum в том, что придание ему читабельного вида приведет к концу.</p>
-              </div>
-            </div>
-            <div className={styles.item}>
-              <div className={styles.wrapper}>
-                <img className={styles.img} src={BlogImg3} alt="Blog Image" />
-              </div>
-              <div className={styles.btm}>
-                <div className={styles.subtopic}>
-                  <span className={styles.date}>31 мая 2025</span>
-                  <span className={styles.author}>Павел Громов</span>
-                </div>
-                <h3 className={styles.topic}>Ощутите красоту в нашем салоне</h3>
-                <p className={styles.text}>Смысл использования Lorem Ipsum в том, что придание ему читабельного вида приведет к концу.</p>
-              </div>
-            </div>
+              )
+            })}
           </div>  
           <Link to="/blog" className={styles.btn}>Смотреть больше историй</Link>      
         </div>

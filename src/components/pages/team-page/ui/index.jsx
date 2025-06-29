@@ -8,8 +8,8 @@ import { db } from '../../../../firebase'
 const TeamPage = () => {
   const [value, loading, error] = useCollection(collection(db, 'experts'))
 
-  if (loading) return <p>Загрузка...</p>
-  if (error) return <p>Ошибка: {error.message}</p>
+  if (loading) return <div className={styles.spinner}>Загрузка...</div>
+  if (error) return <div className={styles.error}>Ошибка: {error.message}</div>
 
   const experts = value?.docs.map(doc => ({ id: doc.id, ...doc.data() })) || []
 

@@ -132,6 +132,25 @@
 	margin-bottom: 20px;
 }
 
+.error {
+	font-family: var(--second-family);
+  text-align: center;
+  font-size: 18px;
+	color: #c0392b;
+  padding: 40px 0;
+}
+
+.spinner {
+	font-family: var(--second-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  font-size: 18px;
+  color: #888;
+  animation: blink 1.5s infinite;
+}
+
 @media (max-width: 1300px) {
 	.content {
 		padding: 60px 0;
