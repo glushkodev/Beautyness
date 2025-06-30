@@ -46,8 +46,12 @@
 .swiper {
   width: 100%;
   overflow: hidden;
-	 padding-bottom: 40px;
-	  box-sizing: border-box;
+	padding-bottom: 40px;
+	box-sizing: border-box;
+}
+
+.swiper:hover {
+	cursor: pointer;
 }
 
 :global(.swiper-slide) {

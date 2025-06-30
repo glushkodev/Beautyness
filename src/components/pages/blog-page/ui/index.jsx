@@ -1,8 +1,9 @@
 import styles from './index.module.css'
 import PageHeader from '../../../shared/PageHeader/PageHeader'
-import { collection, query, orderBy } from 'firebase/firestore'
+import { collection } from 'firebase/firestore'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { db } from '../../../../firebase'
+import { Link } from 'react-router-dom';
 
 const BlogPage = () => {
   const q = collection(db, 'blog')
@@ -22,8 +23,9 @@ const BlogPage = () => {
 					<div className={styles.items}>
              {snapshot?.docs.map(doc => {
               const blog = doc.data()
+              const id = doc.id
               return (
-                <div key={doc.id} className={styles.item}>
+                <Link to={`/blog/${id}`} key={id} className={`${styles.item} ${styles.link}`}>
                   <div className={styles.wrapper}>
                     <img
                       className={styles.img}
@@ -39,7 +41,7 @@ const BlogPage = () => {
                     <h3 className={styles.topic}>{blog.title}</h3>
                     <p className={styles.text}>{blog.description}</p>
                   </div>
-                </div>
+                </Link>
               )
             })}        
           </div>  

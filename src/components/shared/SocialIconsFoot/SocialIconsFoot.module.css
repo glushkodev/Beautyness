@@ -5,7 +5,7 @@
 
 .link { 
 	border: 2px solid #5c8692;
-	background: transparent;
+	background-color: #1e2c30;
 	width: 55px;
 	height: 55px;
 	transition: all 0.4s ease;
@@ -13,6 +13,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.blogLink {
+	border: 1px solid #7a9ca5;
+	width: 45px;
+	height: 45px;
+	background-color: #7a9ca5;
 }
 
 .link:hover {
@@ -50,5 +57,10 @@
 	.link {
 		width: 50px;
     height: 50px;
+	}
+	
+	.blogLink {
+		width: 40px;
+    height: 40px;
 	}
 }

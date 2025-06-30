@@ -34,6 +34,11 @@
 	width: 31%;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .wrapper {
 	width: 370px;
 	height: 325px;
