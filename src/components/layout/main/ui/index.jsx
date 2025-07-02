@@ -8,6 +8,7 @@ import LocationsPage from "../../../pages/locations-page/ui"
 import ServicesPage from "../../../pages/services-page"
 import TeamPage from "../../../pages/team-page"
 import BlogSinglePage from "../../../pages/blog-page-single"
+import TeamSinglePage from "../../../pages/team-page-single"
 
 const Main = () => {
 
@@ -23,7 +24,7 @@ const Main = () => {
 				<Route path="/services" element={<ServicesPage />} />
 				{/* <Route path="/services/:id" element={<ServicesSinglePage />} /> */}
 				<Route path="/team" element={<TeamPage />} />
-				{/* <Route path="/team/:id" element={<TeamSinglePage />} /> */}
+				<Route path="/team/:id" element={<TeamSinglePage />} />
 				<Route path="*" element={<PageNotFound />} />
 			</Routes>
 		</main>

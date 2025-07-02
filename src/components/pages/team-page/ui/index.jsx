@@ -4,6 +4,7 @@ import SocialIcons from '../../../shared/SocialIcons/SocialIcons'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { collection } from 'firebase/firestore'
 import { db } from '../../../../firebase'
+import { Link } from 'react-router-dom'
 
 const TeamPage = () => {
   const [value, loading, error] = useCollection(collection(db, 'experts'))
@@ -25,7 +26,7 @@ const TeamPage = () => {
           <h2 className={styles.title}>Удивительные женщины, стоящие за Beautyness</h2>
           <div className={styles.items}>
             {experts.map(expert => (
-              <div key={expert.id} className={styles.item}>
+              <Link to={`/team/${expert.id}`} key={expert.id} className={styles.item}>
                 <div className={styles.photoWrapper}>
                   <img className={styles.photo} src={expert.photo} alt={expert.name} />
                 </div>
@@ -37,7 +38,7 @@ const TeamPage = () => {
                     <SocialIcons />
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
