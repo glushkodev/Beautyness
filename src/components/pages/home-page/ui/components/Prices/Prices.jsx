@@ -14,7 +14,7 @@ const Prices = () => {
   if (loading) return <div className={styles.spinner}>Загрузка...</div>
   if (error) return <div className={styles.error}>Ошибка загрузки</div>
 
-  const services = snapshot?.docs.map(doc => doc.data()).slice(0, 8)
+  const services = snapshot?.docs.map(doc => ({ id: doc.id, ...doc.data() })).slice(0, 8)
 
   const chunkServices = (arr, size) => {
     const result = []
@@ -28,15 +28,15 @@ const Prices = () => {
 
   const renderServiceList = (chunk) => (
     <div className={styles.list}>
-      {chunk.map((service, idx) => (
-        <div key={idx} className={styles.item}>
+      {chunk.map((service) => (
+        <Link to={`/services/${service.id}`} key={service.id} className={styles.item}>
           <div className={styles.header}>
             <h4 className={styles.title}>{service.title}</h4>
             <span className={styles.dots}></span>
             <span className={styles.price}>от {service.price} руб</span>
           </div>
           <div className={styles.descr}>{service.subtext}</div>
-        </div>
+        </Link>
       ))}
     </div>
   )

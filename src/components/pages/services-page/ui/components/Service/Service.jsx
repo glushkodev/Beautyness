@@ -8,6 +8,7 @@ import Bg from '../../../../../../assets/prices_bg.png'
 import { collection } from 'firebase/firestore'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { db } from '../../../../../../firebase'
+import { Link } from 'react-router-dom'
 
 const Service = () => {
   const q = collection(db, 'services')
@@ -16,9 +17,9 @@ const Service = () => {
   if (loading) return <div className={styles.spinner}>Загрузка...</div>
   if (error) return <div className={styles.error}>Ошибка загрузки</div>
 
-  const services = snapshot?.docs.map(doc => doc.data())
+  const services = snapshot?.docs.map(doc => ({ id: doc.id, ...doc.data() }))
 
-   const chunkServices = (arr, size) => {
+  const chunkServices = (arr, size) => {
     const result = []
     for (let i = 0; i < arr.length; i += size) {
       result.push(arr.slice(i, i + size))
@@ -30,15 +31,15 @@ const Service = () => {
 
   const renderServiceList = (chunk) => (
     <div className={styles.list}>
-      {chunk.map((service, idx) => (
-        <div key={idx} className={styles.item}>
+      {chunk.map((service) => (
+        <Link to={`/services/${service.id}`} key={service.id} className={styles.item}>
           <div className={styles.header}>
             <h4 className={styles.title}>{service.title}</h4>
             <span className={styles.dots}></span>
             <span className={styles.price}>от {service.price} руб</span>
           </div>
           <div className={styles.descr}>{service.subtext}</div>
-        </div>
+        </Link>
       ))}
     </div>
   )

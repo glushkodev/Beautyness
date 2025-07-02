@@ -1,10 +1,10 @@
 import { useState, useRef } from 'react'
 import styles from './Form.module.css'
-import User from '../../../../../../assets/user_ico.svg?react'
-import Mail from '../../../../../../assets/mail_ico.svg?react'
-import Phone from '../../../../../../assets/phone_ico.svg?react'
-import Book from '../../../../../../assets/book_ico.svg?react'
-import Edit from '../../../../../../assets/edit_ico.svg?react'
+import User from '../../../assets/user_ico.svg?react'
+import Mail from '../../../assets/mail_ico.svg?react'
+import Phone from '../../../assets/phone_ico.svg?react'
+import Book from '../../../assets/book_ico.svg?react'
+import Edit from '../../../assets/edit_ico.svg?react'
 
 const Form = () => {
   const [submitted, setSubmitted] = useState(false) 

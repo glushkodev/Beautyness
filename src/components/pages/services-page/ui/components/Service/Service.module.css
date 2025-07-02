@@ -96,6 +96,14 @@
 	justify-content: center;
 	gap: 5px;
 	padding-bottom: 22px;
+	text-decoration: none;
+  color: inherit;
+	transition: all 0.4s ease;
+}
+
+.item:hover .title,
+.item:hover .price {
+	color: #7a9ca5;
 }
 
 .item:not(:last-child) {
@@ -120,6 +128,7 @@
 	line-height: 130%;
 	color: #141414;
 	white-space: nowrap;
+	transition: all 0.4s ease;
 }
 
 .dots {

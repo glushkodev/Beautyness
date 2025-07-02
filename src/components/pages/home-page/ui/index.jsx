@@ -1,6 +1,6 @@
 import Welcome from "./components/welcome/Welcome"
 import About from './components/About/About'
-import Benefits from './components/Benefits/Benefits'
+import Benefits from '../../../shared/Benefits/Benefits'
 import Reviews from "../../../shared/Reviews/Reviews"
 import Services from './components/Services/Services'
 import Blog from './components/Blog/Blog'

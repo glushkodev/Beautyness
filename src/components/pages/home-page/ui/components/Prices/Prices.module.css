@@ -97,6 +97,14 @@
 	gap: 5px;
 	padding-bottom: 22px;
 	border-bottom: 2px solid rgba(155, 183, 191, 0.5);
+	text-decoration: none;
+  color: inherit;
+	transition: all 0.4s ease;
+}
+
+.item:hover .title,
+.item:hover .price {
+	color: #7a9ca5;
 }
 
 .item:not(:first-child) {
@@ -117,6 +125,7 @@
 	line-height: 130%;
 	color: #141414;
 	white-space: nowrap;
+	transition: all 0.4s ease;
 }
 
 .dots {

@@ -1,6 +1,6 @@
-import styles from './Benefits.module.css';
-import Arrow from '../../../../../../assets/benefits_arrow.svg?react';
-import Border from '../../../../../../assets/benefits_border.svg?react';
+import styles from './Benefits.module.css'
+import Arrow from '../../../assets/benefits_arrow.svg?react'
+import Border from '../../../assets/benefits_border.svg?react'
 
 const Benefits = () => {
   return (

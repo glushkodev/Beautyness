@@ -1,6 +1,6 @@
 import PageHeader from "../../../shared/PageHeader/PageHeader"
 import About from './components/About/About'
-import Form from "./components/Form/Form"
+import Form from "../../../shared/Form/Form"
 
 const ContactPage = () => {
 	return (
