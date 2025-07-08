@@ -1,0 +1,316 @@
+.card {
+	padding: 140px 0;
+	background-color: #fff;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.subhead {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 154%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #7a9ca5;
+	margin-bottom: 10px;
+}
+
+.title {
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 130%;
+	letter-spacing: -0.01em;
+	text-align: center;
+	color: #141414;
+	margin-bottom: 40px;
+}
+
+.items {
+	display: flex;
+	gap: 30px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.item {
+	display: flex;
+	background-color: #1e2c30;
+	gap: 25px;
+	height: 100%;
+	width: 50%;
+	padding: 0 0 40px 40px;
+	justify-content: space-between;
+}
+
+.left {
+	padding-top: 40px;
+	display: flex;
+	flex-direction: column;
+}
+
+.subtitle {
+	font-family: var(--second-family);
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 130%;
+	letter-spacing: -0.01em;
+	color: #fff;
+	margin-bottom: 30px;
+}
+
+.subitems {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 30px;
+}
+
+.subitem {
+	display: flex;
+	align-items: flex-start;
+	gap: 25px;
+}
+
+.subsubtitle {
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 220%;
+	color: #fff;
+}
+
+.link {
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 125%;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	background-color: #7a9ca5;
+	padding: 24px 18px;
+}
+
+.link:hover {
+	background-color: #566f75;
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.price {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #142024;
+	width: 100%;
+	padding: 25px 10px;
+}
+
+.subprice {
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: 55px;
+	line-height: 130%;
+	letter-spacing: -0.01em;
+	text-align: center;
+	color: #fff;
+}
+
+.month {
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 130%;
+	text-align: center;
+	color: #fff;
+}
+
+.tarif {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.golden {
+	font-family: var(--font-family);
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 130%;
+	text-transform: uppercase;
+	color: #fff;
+	opacity: 0.2;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
+	text-align: center;
+}
+
+@media (max-width: 1250px) {
+	.card {
+		padding: 60px 0;
+	}
+
+	.title {
+		font-size: 30px;
+	}
+
+	.subhead {
+		font-size: 12px;
+	}
+
+	.subprice,
+	.golden {
+		font-size: 30px;
+	}
+
+	.right {
+		width: 25%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.title,
+	.subtitle {
+		font-size: 24px;
+	}
+
+	.subsubtitle {
+		font-size: 16px;
+	}
+
+	.item {
+		width: 100%;
+	}
+
+	.items {
+		flex-direction: column;
+		justify-content: center;
+		width: 60%;
+	}
+
+	.right {
+		width: 35%;
+	}
+}
+
+@media (max-width: 960px) {
+	.items {
+		width: 70%;
+	}
+
+	.link {
+		padding: 14px 18px;
+	}
+}
+
+@media (max-width: 768px) {
+	.items {
+		width: 80%;
+	}
+
+	.item {
+		flex-direction: column-reverse;
+		gap: 20px;
+		padding: 20px 0;
+	}
+
+	.price {
+		padding: 10px 14px;
+	}
+
+	.golden {
+		transform: none;
+		writing-mode: initial;
+	}
+
+	.right {
+		width: 100%;
+		flex-direction: column-reverse;
+	}
+
+	.title {
+		font-size: 24px;
+		margin-bottom: 25px;
+	}
+
+	.subtitle {
+		font-size: 14px;
+	}
+
+	.subsubtitle {
+		font-size: 12px;
+	}
+
+	.link {
+		font-size: 10px;
+	}
+
+	.subitem {
+		gap: 15px;
+	}
+
+	.ico {
+		width: 20px;
+		height: 25px;
+	}
+
+	.subtitle,
+	.subitems {
+		margin-bottom: 15px;
+	}
+	
+	.left {
+		padding: 0 40px;
+		align-items: center;
+	}
+
+	.subprice,
+	.month,
+	.golden {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 425px) {
+	.items {
+		width: 100%;
+	}
+
+	.subprice,
+	.month,
+	.golden {
+		font-size: 18px;
+	}
+
+	.left {
+		padding: 0 20px;
+	}
+
+	.link {
+		width: 100%;
+	}
+}
