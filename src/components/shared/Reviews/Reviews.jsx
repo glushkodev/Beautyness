@@ -1,5 +1,6 @@
 import styles from './Reviews.module.css'
 import ReviewIcon from '../../../assets/reviews_icon.svg?react'
+import Cursor from '../../../assets/cursor.svg?react'
 import StarRating from '../../pages/home-page/ui/components/StarRating/StarRating'
 import { collection } from 'firebase/firestore'
 import { useCollection } from 'react-firebase-hooks/firestore'
@@ -21,6 +22,7 @@ const Reviews = () => {
     <section className={styles.reviews}>
       <div className={styles.container}>
         <div className={styles.content}>
+          <Cursor className={styles.cursor}/>
           <h3 className={styles.subhead}>Отзывы</h3>
           <h2 className={styles.title}>Что говорят наши клиенты...</h2>
           <div className={styles.items}>
