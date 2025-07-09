@@ -97,6 +97,7 @@
 	letter-spacing: 0.02em;
 	color: #141414;
 	margin-bottom: 15px;
+	min-height: 93px;
 }
 
 .text {
@@ -106,9 +107,11 @@
 	line-height: 155%;
 	letter-spacing: 0.02em;
 	color: #555;
+	min-height: 84px;
 }
 
 .btn {
+	background-color: transparent;
 	border: 2px solid #5c8692;
 	padding: 24px 40px;
 	font-family: var(--font-family);
@@ -121,11 +124,18 @@
 	color: #141414;
 	text-decoration: none;
 	transition: all 0.4s ease;
+	cursor: pointer;
 }
 
 .btn:hover {
 	background-color: #5c8692;
 	color: #fff;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
 }
 
 .error {
@@ -197,7 +207,8 @@
 		width: 60%;
 	}
 
-	.topic {
+	.topic,
+	.text {
 		min-height: auto;
 	}
 
