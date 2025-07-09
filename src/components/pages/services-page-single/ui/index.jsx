@@ -2,12 +2,12 @@ import styles from './index.module.css'
 import PageHeader from '../../../shared/PageHeader/PageHeader'
 import Form from '../../../shared/Form/Form'
 import Benefits from '../../../shared/Benefits/Benefits'
-import ArrowIco from '../../../../assets/services_ico.svg?react'
+import Card from './components/Card/Card'
+import Service from './components/Service/Service'
 import { useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import { db } from '../../../../firebase'
-import Card from './components/Card/Card'
 
 const ServicesSinglePage = () => {
 	const { id } = useParams()
@@ -45,26 +45,7 @@ const ServicesSinglePage = () => {
 				subtitle={"Идеальный сервис"}
 				title={service.title}
 			/>
-			<div className={styles.container}>
-				<div className={styles.content}>
-					<div className={styles.left}>
-						<h3 className={styles.subhead}>Что включает?</h3>
-						<h2 className={styles.head}>О сервисе</h2>
-						<p className={styles.text}>{service.description}</p>
-						<span className={styles.subtitle}>Наша методология:</span>
-						<div className={styles.items}>
-							<div className={styles.item}>
-								<ArrowIco className={styles.ico}/>
-								<div className={styles.context}>
-									<span className={styles.subsubtitle}>Этап оценки</span>
-									<span className={styles.subsubtext}>Смысл использования Lorem Ipsum в том, что он имеет более или менее нормальные буквы.</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<img className={styles.img} src={service.img} alt={service.title} />
-				</div>
-			</div>
+			<Service />
 			<Card />
 			<Form />
 			<Benefits />
