@@ -1,13 +1,15 @@
 import styles from './index.module.css'
 import PageHeader from '../../../shared/PageHeader/PageHeader'
-import Form from '../../../shared/Form/Form'
-import Benefits from '../../../shared/Benefits/Benefits'
-import Card from './components/Card/Card'
-import Service from './components/Service/Service'
 import { useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, lazy } from 'react'
 import { db } from '../../../../firebase'
+import LazyAnimated from '../../../shared/LazyAnimated/LazyAnimated'
+
+const Service = lazy(() => import('./components/Service/Service'))
+const Card = lazy(() => import('./components/Card/Card'))
+const Form = lazy(() => import('../../../shared/Form/Form'))
+const Benefits = lazy(() => import('../../../shared/Benefits/Benefits'))
 
 const ServicesSinglePage = () => {
 	const { id } = useParams()
@@ -45,10 +47,10 @@ const ServicesSinglePage = () => {
 				subtitle={"Идеальный сервис"}
 				title={service.title}
 			/>
-			<Service />
-			<Card />
-			<Form />
-			<Benefits />
+			<LazyAnimated component={Service} />
+      <LazyAnimated component={Card} />
+      <LazyAnimated component={Form} />
+      <LazyAnimated component={Benefits} />
 		</div>
 	)
 }

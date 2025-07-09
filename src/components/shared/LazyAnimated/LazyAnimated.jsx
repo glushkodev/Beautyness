@@ -21,7 +21,7 @@ const LazyAnimated = ({ component: Component }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
-  });
+  })
 
   return (
     <div ref={ref} style={{ minHeight: '300px' }}>
@@ -33,7 +33,7 @@ const LazyAnimated = ({ component: Component }) => {
         </Suspense>
       ) : null}
     </div>
-  );
-};
+  )
+}
 
 export default LazyAnimated

@@ -1,6 +1,9 @@
 import PageHeader from "../../../shared/PageHeader/PageHeader"
-import Discount from "./components/Discount/Discount"
-import Service from "./components/Service/Service"
+import LazyAnimated from '../../../shared/LazyAnimated/LazyAnimated'
+import { lazy } from 'react'
+
+const Service = lazy(() => import('./components/Service/Service'))
+const Discount = lazy(() => import('./components/Discount/Discount'))
 
 const ServicesPage = () => {
 	return (
@@ -10,8 +13,8 @@ const ServicesPage = () => {
 					subtitle="Наши услуги"
 					title="Идеальная красота к вашим услугам"
 				/>
-				<Service />
-				<Discount />
+				<LazyAnimated component={Service} />
+				<LazyAnimated component={Discount} />
 			</div>
 		</div>
 	)

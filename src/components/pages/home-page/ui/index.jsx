@@ -1,6 +1,7 @@
 import { lazy } from 'react'
 import LazyAnimated from '../../../shared/LazyAnimated/LazyAnimated'
 import Welcome from "./components/welcome/Welcome"
+
 const Services = lazy(() => import('./components/Services/Services'))
 const About = lazy(() => import('./components/About/About'))
 const Prices = lazy(() => import('./components/Prices/Prices'))
