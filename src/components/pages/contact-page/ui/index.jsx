@@ -1,6 +1,9 @@
 import PageHeader from "../../../shared/PageHeader/PageHeader"
-import About from './components/About/About'
-import Form from "../../../shared/Form/Form"
+import LazyAnimated from "../../../shared/LazyAnimated/LazyAnimated"
+import { lazy } from 'react'
+
+const About = lazy(() => import("./components/About/About"))
+const Form = lazy(() => import("../../../shared/Form/Form"))
 
 const ContactPage = () => {
 	return (
@@ -10,8 +13,8 @@ const ContactPage = () => {
 					subtitle="Свяжитесь с нами"
 					title="Мы готовы помочь Вам 24/7"
 				/>
-				<About />
-				<Form />
+				<LazyAnimated component={About} />
+				<LazyAnimated component={Form} />
 			</div>
 		</div>
 	)

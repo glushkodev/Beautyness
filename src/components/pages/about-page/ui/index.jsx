@@ -1,9 +1,12 @@
 import PageHeader from "../../../shared/PageHeader/PageHeader"
-import Style from "./components/Style/Style"
-import Values from "./components/Values/Values"
-import Reviews from '../../../shared/Reviews/Reviews'
-import Follow from "./components/Follow/Follow"
-import Experts from "./components/Experts/Experts"
+import LazyAnimated from "../../../shared/LazyAnimated/LazyAnimated"
+import { lazy } from 'react'
+
+const Values = lazy(() => import("./components/Values/Values"))
+const Style = lazy(() => import("./components/Style/Style"))
+const Experts = lazy(() => import("./components/Experts/Experts"))
+const Reviews = lazy(() => import("../../../shared/Reviews/Reviews"))
+const Follow = lazy(() => import("./components/Follow/Follow"))
 
 const AboutPage = () => {
 	return (
@@ -13,11 +16,11 @@ const AboutPage = () => {
 					subtitle="Короткая история о нас"
 					title="Большая история, стоящая за нашим центром красоты"
 				/>
-				<Values />
-				<Style />
-				<Experts />
-				<Reviews />
-				<Follow />
+				<LazyAnimated component={Values} />
+				<LazyAnimated component={Style} />
+				<LazyAnimated component={Experts} />
+				<LazyAnimated component={Reviews} />
+				<LazyAnimated component={Follow} />
 			</div>
 		</div>
 	)
