@@ -3,6 +3,7 @@ import styles from './Experts.module.css'
 import { collection, query, limit } from 'firebase/firestore'
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { db } from '../../../../../../firebase'
+import { Link } from 'react-router-dom'
 
 const Experts = () => {
   const expertsQuery = query(collection(db, 'experts'), limit(3))
@@ -20,8 +21,9 @@ const Experts = () => {
           <div className={styles.items}>
             {snapshot?.docs.map(doc => {
               const expert = doc.data()
+              const id = doc.id
               return (
-                <div key={doc.id} className={styles.item}>
+                <Link to={`/team/${id}`} key={id} className={styles.item}>
                   <div className={styles.photoWrapper}>
                     <img className={styles.photo} src={expert.photo} alt={expert.name} />
                   </div>
@@ -33,7 +35,7 @@ const Experts = () => {
                       <SocialIcons />
                     </div>
                   </div>
-                </div>
+                </Link>
               )
             })}
           </div>
