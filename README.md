@@ -1,4 +1,4 @@
-***Beautyness  — Modern Beauty Salon Website*** 
+***Beautyness  — modern beauty salon website*** 
 
 Hello! 👋
 
