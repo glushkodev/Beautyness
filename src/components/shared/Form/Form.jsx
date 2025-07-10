@@ -5,6 +5,8 @@ import Mail from '../../../assets/mail_ico.svg?react'
 import Phone from '../../../assets/phone_ico.svg?react'
 import Book from '../../../assets/book_ico.svg?react'
 import Edit from '../../../assets/edit_ico.svg?react'
+import { addDoc, collection } from 'firebase/firestore'
+import { db } from '../../../firebase'
 
 const Form = () => {
   const [submitted, setSubmitted] = useState(false) 
@@ -17,10 +19,11 @@ const Form = () => {
   const nameInput = useRef(null)
   const emailInput = useRef(null)
   const serviceInput = useRef(null)
+  const [note, setNote] = useState('')
 
   const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault() 
     let isValid = true
     const digits = phone.replace(/\D/g, '')
@@ -43,14 +46,25 @@ const Form = () => {
     }
     if (!isValid) return
 
-    setPhoneError(false)
-    setNameError(false)
-    setEmailError(false)
-    setServiceError(false)
+    try {
+    await addDoc(collection(db, 'appointments'), {
+      name: nameInput.current?.value.trim(),
+      email: emailValue,
+      phone: phone,
+      service: serviceInput.current?.value.trim(),
+      note: note,
+      timestamp: new Date()
+    })
+
     setSubmitted(true)
-    e.target.reset()
     setPhone('')
+    setNote('')
+    e.target.reset()
+
     setTimeout(() => setSubmitted(false), 3000)
+    } catch (err) {
+      console.error('Ошибка при отправке данных в Firestore:', err)
+    }
   }
 
   const handlePhoneFocus = () => {
@@ -157,7 +171,7 @@ const Form = () => {
 
             <div className={styles.input}>
               <Edit className={styles.icon} />
-              <textarea placeholder="Любая заметка для нас" rows="3" />
+              <textarea placeholder="Любая заметка для нас" rows="3" value={note} onChange={(e) => setNote(e.target.value)}/>
             </div>
             <button
               type="submit"
