@@ -35,7 +35,7 @@ const Card = () => {
                     <span className={styles.subsubtitle}>Увеличивает силу</span>
                   </div>
                 </div>
-                <Link to={'/'} className={styles.link}>Подписаться сейчас</Link>
+                <Link to={'/contact'} className={styles.link}>Подписаться сейчас</Link>
               </div>
               <div className={styles.right}>
                 <div className={styles.price}>
