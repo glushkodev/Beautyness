@@ -20,8 +20,9 @@ const Blog = () => {
           <div className={styles.items}>
             {snapshot?.docs.map(doc => {
               const blog = doc.data()
+              const id = doc.id
               return (
-                <div key={doc.id} className={styles.item}>
+                <Link to={`/blog/${id}`} key={id} className={styles.item}>
                   <div className={styles.wrapper}>
                     <img className={styles.img} src={blog.img} alt={blog.title} />
                   </div>
@@ -33,7 +34,7 @@ const Blog = () => {
                     <h3 className={styles.topic}>{blog.title}</h3>
                     <p className={styles.text}>{blog.description}</p>
                   </div>
-                </div>
+                </Link>
               )
             })}
           </div>  

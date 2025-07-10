@@ -14,7 +14,7 @@ const Welcome = () => {
             </div>
             <h1 className={styles.title}>Красота — это сила, улыбка — ее меч.</h1>
             <span className={styles.text}>В Ipsum доступно множество вариаций отрывков, большинство из которых в той или иной форме подверглись изменениям.</span>
-            <Link to="/services" className={styles.btn}>Забронировать</Link>
+            <Link to="/contact" className={styles.btn}>Забронировать</Link>
           </div>
           <div className={styles.right}>
             <BorderImage className={styles.border}/>

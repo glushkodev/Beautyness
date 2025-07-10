@@ -19,7 +19,7 @@ const FooterNav = () => {
 					<li className={styles.item}><Link className={styles.link} to={'/locations'}>Где мы находимся</Link></li>
 					<li className={styles.item}><Link className={styles.link} to={'/blog'}>Блог</Link></li>
 					<li className={styles.item}><Link className={styles.link} to={'/team'}>Наша команда</Link></li>
-					<li className={styles.item}><Link className={styles.link} to={'/services'}>Записаться</Link></li>
+					<li className={styles.item}><Link className={styles.link} to={'/contact'}>Записаться</Link></li>
 				</ul>
 			</div>
 		</div>
